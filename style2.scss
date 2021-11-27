@@ -1,0 +1,412 @@
+$maincolr:#212121;
+$sectioncolor:#2c2c38;
+$fontColor:#fff;
+$headerColor:#fe5e41;
+$spanColor:#fe5e41;
+
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+}
+body
+{
+    background-color: $maincolr;
+}
+.navbar
+{
+    z-index: 1000101010101010;
+}
+.container
+{
+    margin-top: 117px !important;
+}
+img:hover
+{
+    transform: scale(1.2,1.2);
+    box-shadow:10px 10px 20px #fff;
+}
+aside
+{
+    .wrapper 
+    {
+        position: fixed;
+        bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.wrapper .card {
+    width: 300px;
+    min-height: 500px;
+    background: $sectioncolor;
+    box-shadow: 5px 5px 10px #1f1f1f50, -5px -5px 10px #1f1f1f50;
+    border: none;
+    overflow: hidden
+}
+
+.wrapper .card .bg-pink {
+    width: 100%;
+    height: 100px;
+    background-color: #F50057;
+    animation: img-top 0.8s linear
+}
+
+.wrapper .card .img-container {
+    width: 100%;
+    animation: img-top 0.8s linear
+}
+
+.wrapper .card .img-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    z-index: 5;
+    border: 8px solid #222;
+    margin-top: calc((100px/2)*-1)
+}
+
+@keyframes img-top {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0
+    }
+
+    50% {
+        opacity: 0.5
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.wrapper .card a {
+    text-decoration: none;
+    color: #fff
+}
+
+.wrapper .card a:hover {
+    color: #f1f1f1
+}
+
+.wrapper .card .btn {
+    font-size: 0.82rem;
+    color: #fff;
+    border-radius: 15px
+}
+
+.wrapper .card .btn:hover,
+.wrapper .card .btn.following {
+    background-color: #F50057
+}
+
+.wrapper .card .btn.following:hover {
+    background-color: #f50056c0
+}
+
+.wrapper .card .head {
+    font-size: 0.9rem;
+    color: #F50057;
+    font-weight: 600
+}
+
+.wrapper .card .fs-08 {
+    font-size: 0.8rem
+}
+
+.wrapper .card .progress {
+    height: 0.5rem;
+    border-radius: 0px;
+    background: inherit
+}
+
+.wrapper .card .progress .progress-bar {
+    background-color: #F50057
+}
+
+.wrapper .card .p-html {
+    width: 95%
+}
+
+.wrapper .card .p-css {
+    width: 90%
+}
+
+.wrapper .card .p-js {
+    width: 75%
+}
+
+.wrapper .card .fab {
+    font-size: 1rem;
+    color: #F50057
+}
+
+.wrapper .card .user {
+    animation: op 1.5s ease-in
+}
+
+@keyframes op {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.wrapper .card .details.snippets,
+.wrapper .card .details.project,
+.wrapper .card .details.post {
+    transform: translateX(-500px);
+    animation: fadeIn 1.5s;
+    animation-fill-mode: forwards
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-500px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+.wrapper .card .details:nth-of-type(2) {
+    animation-delay: 0.5s
+}
+
+.wrapper .card .details:nth-of-type(1) {
+    animation-delay: 1s
+}
+
+.wrapper .card .skills {
+    animation: moveTop 1.6s ease-in;
+    overflow: hidden
+}
+
+@keyframes moveTop {
+    0% {
+        transform: translateY(400px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+.wrapper .card .p-html,
+.wrapper .card .html {
+    animation: level 1s;
+    animation-delay: 0.5s
+}
+
+.wrapper .card .p-css,
+.wrapper .card .css {
+    animation: level 2s;
+    animation-delay: 0.5s
+}
+
+.wrapper .card .p-js,
+.wrapper .card .js {
+    animation: level 2.5s;
+    animation-delay: 0.5s
+}
+
+@keyframes level {
+    0% {
+        transform: translateX(-500px);
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+}
+
+.aboutMe
+{
+    color:$fontColor;
+    background-color: $sectioncolor;
+    padding-top: 30px;
+    margin-bottom: 150px!important;
+    .header1
+    {
+        background-color:#fe5e41;
+        padding:10px 0px ;
+        width: 30%;
+    }
+    .aboutMeContainer
+    {
+        span
+        {
+            color: #fe5e41;
+        }
+    }
+}
+
+.Portfolio
+{
+    background-color: $sectioncolor;
+    margin-bottom: 150px!important;
+    .header2
+    {
+        background-color:#fe5e41;
+        padding:10px 0px ;
+        width: 30%;
+    }
+
+.container {
+    transform-style: preserve-3d
+}
+
+.container .box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0px 20px 50px 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer
+}
+
+.container .box .body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.9s ease
+}
+
+.container .box .body .imgContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d
+}
+
+.container .box .body .imgContainer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.container .box .body .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg)
+}
+
+.container .box:hover .body {
+    transform: rotateY(180deg)
+}
+
+.container .box .body .content div {
+    transform-style: preserve-3d;
+    padding: 20px;
+    background: linear-gradient(45deg, #FE0061, #FFEB3B);
+    transform: translateZ(100px)
+}
+
+.container .box .body .content div h3 {
+    letter-spacing: 1px
+}
+}
+
+.skills
+{
+    color:$fontColor;
+    background-color: $sectioncolor;
+    padding-top: 30px;
+    margin-bottom: 150px!important;
+    .header3
+    {
+        background-color:#fe5e41;
+        padding:10px 0px ;
+        width: 30%;
+    }
+}
+.contact
+{
+    color:$fontColor;
+    background-color: $sectioncolor;
+    padding-top: 30px;
+    .header5
+    {
+        background-color:#fe5e41;
+        padding:10px 0px ;
+        width: 30%;
+    }
+}
+.resume
+{
+    color:$fontColor;
+    background-color: $sectioncolor;
+    padding-top: 30px;
+    margin-bottom: 150px!important;
+    color: $fontColor;
+    .header4
+    {
+        background-color:#fe5e41;
+        padding:10px 0px ;
+        width: 30%;
+    }
+    time
+    {
+        color:#fe5e41;
+    }
+    span
+    {
+        font-family:cursive;
+    }
+    p
+    {
+        color: #707070;
+    }
+    img
+    {
+        opacity: 0.0;
+    }
+    .carousel-indicators
+    {
+        button
+        {
+            width: 10vh;
+            padding: 2vh 10vh;
+        }
+    }
+    .carousel-item
+    {
+        margin-top: 0vh !important;
+    }
+}
+
+.buttonContainer
+{
+    background-color: $sectioncolor;
+}
+
+footer
+{
+    background-color: #191922;
+}
